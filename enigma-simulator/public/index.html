@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enigma Simulator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Enigma Simulator</h1>
+
+    <section class="controls">
+      <label>Plain/Cipher text
+        <textarea id="input" rows="4" placeholder="Type text here"></textarea>
+      </label>
+
+      <div class="rotors">
+        <div>
+          <label>Rotor 1 pos <input id="r1" value="A" maxlength="1"></label>
+          <label>Rotor 2 pos <input id="r2" value="A" maxlength="1"></label>
+          <label>Rotor 3 pos <input id="r3" value="A" maxlength="1"></label>
+        </div>
+      </div>
+
+      <label>Plugboard pairs (e.g. AB CD EF)
+        <input id="plugboard" placeholder="AB CD EF">
+      </label>
+
+      <div class="actions">
+        <button id="encrypt">Encrypt / Decrypt</button>
+        <button id="clear">Clear</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Result</h2>
+      <pre id="output"></pre>
+    </section>
+
+    <footer>
+      <p>Uses ES modules from <code>/enigma/</code></p>
+    </footer>
+  </main>
+  <script type="module" src="/script.js"></script>
+</body>
+
+</html>

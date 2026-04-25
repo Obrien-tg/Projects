@@ -82,9 +82,10 @@ class Car {
             }
         }
 
-        //actually moving the car
-        this.x += Math.cos(this.angle) * this.speed;
-        this.y += Math.sin(this.angle) * this.speed;
+        // Move in the same orientation the car is drawn:
+        // angle 0 points upward, matching the vertical car body.
+        this.x += Math.sin(this.angle) * this.speed;
+        this.y -= Math.cos(this.angle) * this.speed;
     }
 
      draw(ctx) {
